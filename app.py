@@ -1,5 +1,22 @@
 import streamlit as st
 
+# --- CUSTOM PAGE BACKGROUND ---
+page_bg_img = '''
+<style>
+[data-testid="stAppViewContainer"] {
+    background-image: url("https://images.unsplash.com/photo-1605296867304-46d5465a13f1");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+# --- END CUSTOM BACKGROUND ---
+import streamlit as st
+
 def calculate_bmi(weight_kg, height_cm):
     height_m = height_cm / 100
     bmi = weight_kg / (height_m ** 2)
@@ -43,6 +60,7 @@ def get_fitness_plan(bmi):
 
 def main():
     st.title("🏋️ Personalized Fitness Plan Generator")
+    st.image("https://upload.wikimedia.org/wikipedia/commons/3/3c/Fitness_center_logo.png", width=150)
     st.write("Enter your details below to receive your customized monthly fitness plan.")
 
     weight = st.number_input("Enter your weight (kg)", min_value=1.0, format="%.1f")
