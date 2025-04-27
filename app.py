@@ -60,7 +60,7 @@ def get_fitness_plan(bmi):
 
 def main():
     st.title("🏋️ Personalized Fitness Plan Generator")
-    st.image("https://upload.wikimedia.org/wikipedia/commons/3/3c/Fitness_center_logo.png", width=150)
+    st.image("https://cdn-icons-png.flaticon.com/512/1048/1048953.png", width=100)
     st.write("Enter your details below to receive your customized monthly fitness plan.")
 
     weight = st.number_input("Enter your weight (kg)", min_value=1.0, format="%.1f")
